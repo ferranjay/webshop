@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Xventurers</title>
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-    <link href="https://fonts.googleapis.com/css?family=Lora:700" rel="stylesheet">
+    <title>Webshop2</title>
+    <!-- <link href="css/style.css" rel="stylesheet"> -->
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
 
 
 </head>
@@ -14,22 +14,22 @@
 <body>
     <!-- navigation bar-->
     <header>
-        <nav class="containerone">
+        <nav class="menu">
             <ul class="menu">
                 <li>
-                    <a href="#main">Xventurers</a>
+                    <a href="../index.php">Xventurers</a>
                 </li>
                 <li>
-                    <a href="html/shop.php">Shop</a>
+                    <a href="../html/shop.php">Shop</a>
                 </li>
                 <li>
-                    <a href="html/about.php">About</a>
+                    <a href="../html/about.php">About</a>
                 </li>
                 <li>
-                    <a href="html/signuppage.php">SignUp</a>
+                    <a href="../html/signuppage.php">SignUp</a>
                 </li>
                 <li>
-                    <a href="html/contact.php">Contact</a>
+                    <a href="../html/contact.php">Contact</a>
                 </li>
             </ul>
         </nav>
@@ -37,17 +37,11 @@
 
     <!-- landing page -->
 
-    <div class="containertwo">
-        <div class="main">
-        <h1 class="type">Xventures</h1>
+    <a name="index.php"></a>
+    <div class="section-one">
+        <div class="container">
+            <h3 class="type">Durable items for the extreme adventurers</h3>
         </div>
-    </div>
-
-    <div class="containerthree">
-        <div class="main">
-            <h2 class="type">Stylish items for sporters & adventurers</h2>
-        </div>
-    </div>
 
 
 

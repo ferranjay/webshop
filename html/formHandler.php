@@ -13,8 +13,8 @@
         $email = $_POST["user_email"];
         $user_password = $_POST["user_password"];
     
+    
         include "db_connection.php";
-
         try {
                 $sql = "INSERT INTO customers (user_firstname, user_lastname, user_email, user_password)
                 VALUES ('$firstname', '$lastname', '$email', '$user_password')";

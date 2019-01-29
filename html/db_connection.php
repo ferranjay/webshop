@@ -1,9 +1,9 @@
 <?php
 //DB_CONNECTION.PHP
 $servername = "localhost";
-$username = "ferranjay";
+$username = "root";
 $password = "";
-$database = "eCommerce";
+$database = "webshop";
 try {
     $conn = new PDO("mysql:host=$servername;dbname=$database", $username, $password);
     // set the PDO error mode to exception

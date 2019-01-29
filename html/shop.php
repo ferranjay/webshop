@@ -4,10 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Webshop2</title>
-    <!-- <link href="css/style.css" rel="stylesheet"> -->
-    <link rel="stylesheet" type="text/css" href="../css/style.css">
-
+    <title>Webshop</title>
+    <link href="../css/style.css" rel="stylesheet">
 
 </head>
 
@@ -35,29 +33,15 @@
         </nav>
     </header>
 
-     <!-- signup page -->
-    
+    <!-- landing page -->
 
-        <form action="formHandler.php" method="POST" class="form">
+    <a name="index.php"></a>
+    <div class="section-one">
+        <div class="container">
+            <h3 class="type">Durable items for the extreme adventurers</h3>
+        </div>
 
-        <h1>Sign Up Here!</h1>
 
-        <legend>Please fill in your personal info</legend>
-        <label for="name">FirstName:</label>
-        <input type="text" id="name" name="user_firstname" autofocus>
-
-        <label for="name">LastName:</label>
-        <input type="text" name="user_lastname">
-
-        <label for="mail">Email:</label>
-        <input type="email" id="mail" name="user_email">
-
-        <label for="password">Password:</label>
-        <input type="password" id="password" name="user_password">
-
-        <button type="submit">Sign Up</button>
-
-    </form>
 
 
 
@@ -72,3 +56,4 @@
 </body>
 
 </html>
+
