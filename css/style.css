@@ -1,15 +1,24 @@
 body {
     font-family: "raleway";
+    min-height: 2000px; 
+    position: relative;
 }
+/* navbar */
 
 .containerone {
     display: flex;
+    opacity: 0.95;
     justify-content: center;
+    overflow: hidden;
+    background-color: white;
     height: 80px;
+    position: fixed; 
+    top: 0; 
+    width: 100%;
 }
 
 .menu{
-    padding-top: 10px;
+    padding-top: 12px;
     display: flex;
     flex-direction: row;
     align-content: center;
@@ -23,10 +32,19 @@ body {
   text-decoration: none;
 }
 
+.formone {
+  width: 200px;
+  float: right;
+  color: white;
+  line-height: 70px;
+}
+
+/* landing page */
+
 .containertwo {
   justify-content: center;
-  font-family: 'Lora', serif;
-  font-size: 40px;
+  font-family: "Black Heart";
+  font-size: 60px;
   color: white;
   display: flex;
   height: 60vh;
@@ -36,13 +54,61 @@ body {
   background-size:cover;
 }
 
+.containertwo h1 {
+  padding-top: 150px;
+}
+
 .containerthree {
   display: flex;
   justify-content: center;
   display: flex;
-  height: 60vh;
+  height: 1000px;
   width:100%;
   background: white;
+}
+
+
+/* footer */
+
+footer {
+  height: 500px;
+  background-color:  #f8f8f8;
+}
+
+.footertext {
+  padding-top: 400px;
+  text-align: center;
+}
+
+/* floating sidebar */
+
+.link-container {
+  position: fixed;
+  top: 400px;
+  height: 380px;
+  left: 20px;
+  padding: 20px;
+  background: #fff;
+  box-shadow: 0 0 5px #333;
+}
+
+.link-container a {
+  display: block;
+  padding: 5px;
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+}
+
+.link-container a:hover {
+  color: yellowgreen;
+  text-decoration: none;
+}
+
+.sticky-links {
+  position: fixed;
+  left: 20px;
+  top: 50px; /* how far from the top of the page the item should be pinned */
 }
 
 
@@ -67,116 +133,4 @@ body {
 
 
 
-
-
-
-
-
-
-
-form {
-    max-width: 300px;
-    margin: 10px auto;
-    padding: 10px 20px;
-    background: white;
-    border-radius: 8px;
-  }
-  
-  h1 {
-    margin: 0 0 30px 0;
-    text-align: center;
-  }
-  
-  input[type="text"],
-  input[type="password"],
-  input[type="date"],
-  input[type="datetime"],
-  input[type="email"],
-  input[type="number"],
-  input[type="search"],
-  input[type="tel"],
-  input[type="time"],
-  input[type="url"],
-  textarea,
-
-  select {
-    background: rgba(255, 255, 255, 0.1);
-    border: none;
-    font-size: 16px;
-    height: auto;
-    margin: 0;
-    outline: 0;
-    padding: 15px;
-    width: 100%;
-    background-color: #e8eeef;
-    color: #8a97a0;
-    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.03) inset;
-    margin-bottom: 30px;
-  }
-  
-  input[type="radio"],
-  input[type="checkbox"] {
-    margin: 0 4px 8px 0;
-  }
-  
-  select {
-    padding: 6px;
-    height: 32px;
-    border-radius: 2px;
-  }
-  
-  button {
-    padding: 19px 39px 18px 39px;
-    color: #FFF;
-    background-color: grey;
-    font-size: 18px;
-    text-align: center;
-    font-style: normal;
-    border-radius: 5px;
-    width: 100%;
-    border: 1px solid grey;
-    border-width: 1px 1px 3px;
-    box-shadow: 0 -1px 0 rgba(255, 255, 255, 0.1) inset;
-    margin-bottom: 10px;
-  }
-  
-  fieldset {
-    margin-bottom: 30px;
-    border: none;
-  }
-  
-  legend {
-    font-size: 1.4em;
-    margin-bottom: 10px;
-  }
-  
-  label {
-    display: block;
-    margin-bottom: 8px;
-  }
-  
-  label.light {
-    font-weight: 300;
-    display: inline;
-  }
-  
-  .number {
-    background-color: greenyellow;
-    color: #fff;
-    height: 30px;
-    width: 30px;
-    display: inline-block;
-    font-size: 0.8em;
-    margin-right: 4px;
-    line-height: 30px;
-    text-align: center;
-    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.2);
-    border-radius: 100%;
-  }
-  
-  @media screen and (min-width: 480px) {
-    form {
-      max-width: 480px;
-    }
-  }
   
