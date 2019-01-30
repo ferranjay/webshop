@@ -86,7 +86,7 @@
     <!-- footer -->
     <footer>
         <div class="footertext">
-            Ferran Jay &copy; 2019
+         &copy; 2019 by www.xventure.com
         </span>
     </footer>
 
