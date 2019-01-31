@@ -30,6 +30,12 @@ body {
   padding: 40px;
   font-family: "raleway";
   text-decoration: none;
+  color: black;
+}
+
+.menu li a:hover {
+  color: yellowgreen;
+  text-decoration: none;
 }
 
 .formone {
@@ -46,6 +52,7 @@ body {
   font-family: "Black Heart";
   font-size: 60px;
   color: white;
+  text-shadow: 5px 5px 5px black;
   display: flex;
   height: 60vh;
   width:100%;
@@ -112,6 +119,28 @@ footer {
 }
 
 
+/* CUSTOMER LOGIN PAGE */
+
+.containerlogin {
+    justify-content: center;
+    font-family: "Black Heart";
+    font-size: 60px;
+    color: lightskyblue;
+    text-shadow: 5px 5px 5px black;
+    display: flex;
+    height: 60vh;
+    width:100%;
+    background-image: url("../img/2.jpg");
+    background-position-y: 30%;
+    background-repeat:no-repeat;
+    background-size:cover;
+  }
+
+.containerlogin h1 {
+  padding-top: 150px;
+}
+
+
 
 
 
@@ -138,6 +167,61 @@ footer {
 }
 
 
+/* REGISTER PAGE */
+
+.containerregister {
+  display: flex;
+  justify-content: center;
+  font-family: "Black Heart";
+  font-size: 60px;
+  color: yellow;
+  text-shadow: 5px 5px 5px black;
+  height: 60vh;
+  width:100%;
+  background-image: url("../img/3.jpg");
+  background-size: 100%;
+  background-position-y: 30%;
+  background-position-x: 80%;
+
+}
+
+.containerregister h1 {
+  padding-top: 150px;
+}
+
+
+.form-wrapper-register {
+  display: flex;
+  justify-content: center;
+  height: 1000px;
+  width:100%;
+  background: white;
+  padding-top: 100px;
+}
+
+
+/* CONTACT PAGE */
+
+
+.containercontact {
+  display: flex;
+  justify-content: center;
+  font-family: "Black Heart";
+  font-size: 60px;
+  color: yellowgreen;
+  text-shadow: 5px 5px 5px black;
+  height: 60vh;
+  width:100%;
+  background-image: url("../img/contact.jpg");
+  background-size: 100%;
+  background-position-y: 30%;
+  background-position-x: 20%;
+
+}
+
+.containercontact h1 {
+  padding-top: 150px;
+}
 
 
 

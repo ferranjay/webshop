@@ -1,4 +1,8 @@
 <!DOCTYPE html>
+<?php
+include ("db.php");
+?>
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -21,13 +25,13 @@
                     <a href="../index.php">Home</a>
                 </li>
                 <li>
-                    <a href="../html/shop.php">All products</a>
+                    <a href="../html/shop.php">Shop</a>
                 </li>
                 <li>
-                    <a href="../html/about.php">My account</a>
+                    <a href="../html/about.php">Register</a>
                 </li>
                 <li>
-                    <a href="../html/signuppage.php">SignUp</a>
+                    <a href="../html/signuppage.php">Login</a>
                 </li>
                 <li>
                     <a href="../html/contact.php">Contact</a>
@@ -51,54 +55,58 @@
 
         <div class="form-wrapper">
 
-        <form class="insertproduct" action="insert_product.php" method="post" enctype="multipart/form-data">
+    <form class="insertproduct" action="insertProductHandler.php" method="post" enctype="multipart/form-data">
 
         <table>
         <tr>
         <td>Product Title</td>
-        <td><input type="text" name="product_title"/></td>
+        <td><input type="text" name="product_title" size="30" required/></td>
         </tr>
 
         <tr>
         <td>Product Category</td>
-        <td><input type="text" name="product_category"/></td>
+        <td> 
+        <select name="product_cat" required><option>Select</option>
+        </select>
+        </td>
         </tr>
 
         <tr>
         <td>Product Brand</td>
-        <td><input type="text" name="product_brand"/></td>
+        <td>
+        <select name="product_brand" required><option>Select</option>
+        </select>
+        </td>
         </tr>
 
         <tr>
         <td>Product Image</td>
-        <td><input type="text" name="product_image"/></td>
+        <td><input type="file" name="product_image"/></td>
         </tr>
 
         <tr>
         <td>Product Price</td>
-        <td><input type="text" name="product_price"/></td>
+        <td><input type="text" name="product_price" required size="30"/></td>
         </tr>
 
         <tr>
         <td>Product Description</td>
-        <td><input type="text" name="product_desc"/></td>
+        <td><textarea name="product_desc"></textarea></td>
         </tr>
 
         <tr>
         <td>Product Keywords</td>
-        <td><input type="text" name="product_keywords"/></td>
+        <td><input type="text" name="product_keywords" required size="30"/></td>
         </tr>
 
         <tr>
         <td>Add</td>
-        <td colspan="4"><input type="submit" name="insert_post" value="Insert new"/></td>
+        <td><input type="submit" name="insert_post" value="Insert new" size="30"/></td>
         </tr>
 
         </table>
+    </form>
 
-        
-        </div>
-        </form>
     </div>
 
     

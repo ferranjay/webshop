@@ -14,24 +14,29 @@
 <body>
     <!-- navigation bar-->
     <header>
-        <nav class="menu">
+        <nav class="containerone">
+
             <ul class="menu">
                 <li>
-                    <a href="../index.php">Xventurers</a>
+                    <a href="#main">Home</a>
                 </li>
                 <li>
-                    <a href="../html/shop.php">Shop</a>
+                    <a href="../html/shop.php">Products</a>
                 </li>
                 <li>
-                    <a href="../html/about.php">About</a>
+                    <a href="../customer/customer_registration.php">Register</a>
                 </li>
                 <li>
-                    <a href="../html/signuppage.php">SignUp</a>
+                    <a href="html/login.php">Login</a>
                 </li>
                 <li>
-                    <a href="../html/contact.php">Contact</a>
+                    <a href="html/contact.php">Contact</a>
                 </li>
             </ul>
+
+            <form class="formone" method="get" action="results.php" enctype="multipart/form-data">
+                <input type="text" name="user_query" placeholder="search a product"/> 
+                </form>
         </nav>
     </header>
 

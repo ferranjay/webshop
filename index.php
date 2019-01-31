@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <?php include ("functions/functions.php") ?>
+<?php include ("admin_area/db.php") ?>
 
 <html lang="en">
 <head>
@@ -20,16 +21,16 @@
 
             <ul class="menu">
                 <li>
-                    <a href="#main">Home</a>
+                    <a href="index.php">Home</a>
                 </li>
                 <li>
-                    <a href="html/shop.php">All products</a>
+                    <a href="html/shop.php">Shop</a>
                 </li>
                 <li>
-                    <a href="html/about.php">My account</a>
+                    <a href="customer/customer_registration.php">Register</a>
                 </li>
                 <li>
-                    <a href="html/signuppage.php">SignUp</a>
+                    <a href="customer/login.php">Login</a>
                 </li>
                 <li>
                     <a href="html/contact.php">Contact</a>
@@ -53,16 +54,16 @@
     <div class="containerthree">
         <div class="three-wrapper">
         <div class="main1">
-            <h3 class="type1">Sport & Stylish lifestyle</h2>
+            <h3 class="type1">...</h2>
         </div>
         <div class="main2">
-            <h3 class="type2">New Items</h2>
+            <h3 class="type2">...</h2>
         </div>
         <div class="main3">
-            <h3 class="type3">Archive Sale</h2>
+            <h3 class="type3">...</h2>
         </div>
         <div class="main4">
-            <h3 class="type4">All products</h2>
+            <h3 class="type4">...</h2>
         </div>
         </div>
     </div>

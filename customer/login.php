@@ -1,11 +1,16 @@
 <!DOCTYPE html>
+<?php
+include ("db.php");
+?>
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Webshop</title>
-    <link href="../css/style.css" rel="stylesheet">
+    <title>Xventure</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Lora:700" rel="stylesheet">
 
 
 </head>
@@ -41,34 +46,39 @@
 
     <!-- landing page -->
 
-    <div class="containercontact">
+    <div class="containerlogin">
         <div class="title">
         <h1>Xventure</h1>
         </div>
     </div>
 
-    <div class="containerthree">
-        <div class="three-wrapper">
-        <div class="main1">
-            <h3 class="type1"></h2>
-        </div>
-        <div class="main2">
-            <h3 class="type2"></h2>
-        </div>
-        <div class="main3">
-            <h3 class="type3"></h2>
-        </div>
-        <div class="main4">
-            <h3 class="type4"></h2>
-        </div>
-        </div>
+    <div class="form-wrapper">
+
+    <?php
+    //if(){}
+    //isset()
+    //$_GET['et']
+        if(isset($_GET['et'])){
+            echo '<h1> EMAIL/WW IS ONJUIST </h1>';
+        }else{
+            //niks
+        }
+    ?>
+
+    <form class="loginForm" action="loginFormHandler.php" method="POST">
+        <h1>Login</h1>
+        <label for="username">Email:</label>
+        <input type="email" id="username" name="user_email" autofocus required/>
+        
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="user_password" required/>
+
+        <button type="submit" class="submitButton">Login</button>
+        <p>Don't have an account? <a href="customer_registration.php">Register here</a></p>
+    </form>
     </div>
 
     
-
-
-
-
 
 
     <!-- footer -->
@@ -82,3 +92,24 @@
 </body>
 
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
