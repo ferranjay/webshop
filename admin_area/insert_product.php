@@ -8,7 +8,7 @@ include ("db.php");
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Xventure</title>
+    <title>Statements</title>
     <link rel="stylesheet" type="text/css" href="../css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Lora:700" rel="stylesheet">
 
@@ -48,7 +48,7 @@ include ("db.php");
 
     <div class="containertwo">
         <div class="title">
-        <h1>Xventure</h1>
+        <h1>Statements</h1>
         </div>
     </div>
 
@@ -67,6 +67,20 @@ include ("db.php");
         <td>Product Category</td>
         <td> 
         <select name="product_cat" required><option>Select</option>
+        <?php 
+
+        $SQL_QUERIE_SELECT_ALL_CATEGORIES = "SELECT * FROM categories"; // querie (opdracht)
+
+        $DATABASE_RESULT = mysqli_query ($db_connection, $SQL_QUERIE_SELECT_ALL_CATEGORIES); // uitslag van de query en wat terug komt van de database
+
+        foreach($DATABASE_RESULT as $row){   
+
+        $cat_id = $row['cat_id'];
+        $cat_title = $row['cat_title'];
+
+        echo "<option>$cat_title</option>";
+        }
+        ?>
         </select>
         </td>
         </tr>
@@ -75,6 +89,20 @@ include ("db.php");
         <td>Product Brand</td>
         <td>
         <select name="product_brand" required><option>Select</option>
+
+        <?php
+        $SQL_QUERIE_SELECT_ALL_BRANDS = "SELECT * FROM brands";
+
+        $DATABASE_RESULT = mysqli_query ($db_connection, $SQL_QUERIE_SELECT_ALL_BRANDS);
+    
+        foreach ($DATABASE_RESULT as $row){
+    
+            $brand_id = $row['brand_id'];
+            $brand_title = $row['brand_title'];
+    
+            echo "<option>$brand_title</option>";
+        }
+        ?>
         </select>
         </td>
         </tr>
@@ -110,12 +138,6 @@ include ("db.php");
     </div>
 
     
-
-
-
-
-
-
     <!-- footer -->
     <footer>
         <div class="footertext">

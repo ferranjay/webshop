@@ -56,9 +56,10 @@ body {
   display: flex;
   height: 60vh;
   width:100%;
-  background-image: url("../img/skate4.jpg");
+  background-image: url("../img/6.jpg");
+  background-position-y: 30%;
   background-repeat:no-repeat;
-  background-size:cover;
+  background-size: cover;
 }
 
 .containertwo h1 {
@@ -118,6 +119,31 @@ footer {
   top: 50px; /* how far from the top of the page the item should be pinned */
 }
 
+/* SHOP PAGE */
+
+.containershop {
+  justify-content: center;
+  font-family: "Black Heart";
+  font-size: 60px;
+  color: yellow;
+  text-shadow: 5px 5px 5px black;
+  display: flex;
+  height: 60vh;
+  width:100%;
+  background-image: url("../img/33.jpg");
+  background-repeat:no-repeat;
+  background-size:cover;
+  background-position-y: 30%;
+}
+
+.containershop h1 {
+  padding-top: 150px;
+}
+
+
+
+
+
 
 /* CUSTOMER LOGIN PAGE */
 
@@ -174,11 +200,11 @@ footer {
   justify-content: center;
   font-family: "Black Heart";
   font-size: 60px;
-  color: yellow;
+  color: red;
   text-shadow: 5px 5px 5px black;
   height: 60vh;
   width:100%;
-  background-image: url("../img/3.jpg");
+  background-image: url("../img/44.jpg");
   background-size: 100%;
   background-position-y: 30%;
   background-position-x: 80%;

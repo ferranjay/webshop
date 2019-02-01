@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Webshop</title>
+    <title>Statements</title>
     <link href="../css/style.css" rel="stylesheet">
 
 
@@ -43,7 +43,7 @@
 
     <div class="containercontact">
         <div class="title">
-        <h1>Xventure</h1>
+        <h1>Statements</h1>
         </div>
     </div>
 

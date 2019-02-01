@@ -10,7 +10,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Xventure</title>
+    <title>Statements</title>
     <link rel="stylesheet" type="text/css" href="../css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Lora:700" rel="stylesheet">
 
@@ -50,7 +50,7 @@
 
     <div class="containerregister">
         <div class="title">
-        <h1>Xventure</h1>
+        <h1>Statements</h1>
         </div>
     </div>
 
