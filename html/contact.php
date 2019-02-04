@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Statements</title>
-    <link href="../css/style.css" rel="stylesheet">
+    <title>Contact Us</title>
+    <!-- <link href="css/style.css" rel="stylesheet"> -->
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
 
 
 </head>
@@ -17,19 +18,19 @@
 
             <ul class="menu">
                 <li>
-                    <a href="../index.php">Home</a>
+                    <a href="#main">HOME</a>
                 </li>
                 <li>
-                    <a href="../html/shop.php">Shop</a>
+                    <a href="../html/shop.php">PRODUCTS</a>
                 </li>
                 <li>
-                    <a href="../customer/customer_registration.php">Register</a>
+                    <a href="../customer/customer_registration.php">REGISTER</a>
                 </li>
                 <li>
-                    <a href="../customer/login.php">Login</a>
+                    <a href="html/login.php">LOGIN</a>
                 </li>
                 <li>
-                    <a href="../html/contact.php">Contact</a>
+                    <a href="html/cart.php">CART</a>
                 </li>
             </ul>
 
@@ -41,31 +42,11 @@
 
     <!-- landing page -->
 
-    <div class="containercontact">
-        <div class="title">
-        <h1>Statements</h1>
+    <a name="index.php"></a>
+    <div class="section-one">
+        <div class="container">
+            <h3 class="type">Durable items for the extreme adventurers</h3>
         </div>
-    </div>
-
-    <div class="containerthree">
-        <div class="three-wrapper">
-        <div class="main1">
-            <h3 class="type1"></h2>
-        </div>
-        <div class="main2">
-            <h3 class="type2"></h2>
-        </div>
-        <div class="main3">
-            <h3 class="type3"></h2>
-        </div>
-        <div class="main4">
-            <h3 class="type4"></h2>
-        </div>
-        </div>
-    </div>
-
-    
-
 
 
 
@@ -73,12 +54,28 @@
 
     <!-- footer -->
     <footer>
-        <div class="footertext">
-         &copy; 2019 by www.xventure.com
-        </span>
+    <div class="footertext">
+            <ul class="menufooter">
+                <li>
+                    <a>&copy; STATEMENTS 2019</a>
+                </li>
+                <li>
+                    <a href="html/shop.php">CONTACT US</a>
+                </li>
+                <li>
+                    <a href="customer/customer_registration.php">SHIPPING</a>
+                </li>
+                <li>
+                    <a href="customer/login.php">TRACKING</a>
+                </li>
+                <li>
+                    <a href="html/cart.php">RETURNS</a>
+                </li>
+            </ul>
+        </div>
     </footer>
 
-    <script src="js/main.js"></script>
+    <script src="main.js"></script>
 </body>
 
 </html>

@@ -11,6 +11,7 @@ include ("db.php");
     <title>Statements</title>
     <link rel="stylesheet" type="text/css" href="../css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Lora:700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
 
 
 </head>
@@ -22,25 +23,25 @@ include ("db.php");
 
             <ul class="menu">
                 <li>
-                    <a href="../index.php">Home</a>
+                    <a href="../index.php">HOME</a>
                 </li>
                 <li>
-                    <a href="../html/shop.php">Shop</a>
+                    <a href="../html/shop.php">SHOP</a>
                 </li>
                 <li>
-                    <a href="../html/about.php">Register</a>
+                    <a href="../html/about.php">REGISTER</a>
                 </li>
                 <li>
-                    <a href="../html/signuppage.php">Login</a>
+                    <a href="../html/signuppage.php">LOGIN</a>
                 </li>
                 <li>
-                    <a href="../html/contact.php">Contact</a>
+                    <a href="../html/contact.php">CONTACT</a>
                 </li>
-            </ul>
 
             <form class="formone" method="get" action="results.php" enctype="multipart/form-data">
                 <input type="text" name="user_query" placeholder="search a product"/> 
                 </form>
+                </ul>
         </nav>
     </header>
 
@@ -78,7 +79,7 @@ include ("db.php");
         $cat_id = $row['cat_id'];
         $cat_title = $row['cat_title'];
 
-        echo "<option>$cat_title</option>";
+        echo "<option value='$cat_id'>$cat_title</option>";
         }
         ?>
         </select>
@@ -100,7 +101,7 @@ include ("db.php");
             $brand_id = $row['brand_id'];
             $brand_title = $row['brand_title'];
     
-            echo "<option>$brand_title</option>";
+            echo "<option value='$brand_id'>$brand_title</option>";
         }
         ?>
         </select>

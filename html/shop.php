@@ -9,6 +9,7 @@
     <title>Statements</title>
     <link rel="stylesheet" type="text/css" href="../css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Lora:700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
 
 
 </head>
@@ -20,25 +21,25 @@
 
             <ul class="menu">
                 <li>
-                    <a href="../index.php">Home</a>
+                    <a href="../index.php">HOME</a>
                 </li>
                 <li>
-                    <a href="../html/shop.php">Shop</a>
+                    <a href="../html/shop.php">SHOP</a>
                 </li>
                 <li>
-                    <a href="../customer/customer_registration.php">Register</a>
+                    <a href="../customer/customer_registration.php">REGISTER</a>
                 </li>
                 <li>
-                    <a href="customer/login.php">Login</a>
+                    <a href="../customer/login.php">LOGIN</a>
                 </li>
                 <li>
-                    <a href="html/contact.php">Contact</a>
+                    <a href="../html/cart.php">CART</a>
                 </li>
             </ul>
-
             <form class="formone" method="get" action="results.php" enctype="multipart/form-data">
                 <input type="text" name="user_query" placeholder="search a product"/> 
                 </form>
+            
         </nav>
     </header>
 
@@ -50,29 +51,24 @@
         </div>
     </div>
 
-    <div class="containerthree">
-        <div class="three-wrapper">
-        <div class="main1">
-            <h3 class="type1">...</h2>
-        </div>
-        <div class="main2">
-            <h3 class="type2">...</h2>
-        </div>
-        <div class="main3">
-            <h3 class="type3">...</h2>
-        </div>
-        <div class="main4">
-            <h3 class="type4">...</h2>
-        </div>
-        </div>
+    <div class="containershopmain">
+    <div id="content_area"> 
+
+    <div id="products_box"> 
+
+    <?php getPro(); ?>
+
+    <div id="shopping_cart"></div>
+    </div>
+    </div>
     </div>
 
     <div class="link-container">
-    <h3>Categories</h3>
+    <h3>CATEGORIES</h3>
 
     <?php getCats(); ?>
 
-    <h3>Brands</h3>
+    <h3>BRANDS</h3>
     
     <?php getBrands(); ?>
 
@@ -80,14 +76,27 @@
 
 
 
-
-
-
     <!-- footer -->
     <footer>
-        <div class="footertext">
-         &copy; 2019 by www.xventure.com
-        </span>
+    <div class="footertext">
+            <ul class="menufooter">
+                <li>
+                    <a>&copy; STATEMENTS 2019</a>
+                </li>
+                <li>
+                    <a href="html/shop.php">CONTACT US</a>
+                </li>
+                <li>
+                    <a href="customer/customer_registration.php">SHIPPING</a>
+                </li>
+                <li>
+                    <a href="customer/login.php">TRACKING</a>
+                </li>
+                <li>
+                    <a href="html/cart.php">RETURNS</a>
+                </li>
+            </ul>
+        </div>
     </footer>
 
     <script src="js/main.js"></script>

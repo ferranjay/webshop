@@ -16,10 +16,11 @@ $insert_c = "INSERT INTO customers (customer_ip, customer_name, customer_email, 
 
 //echo $insert_c;
 
-$run_c = mysqli_query($db_connection, $insert_c);  // variabele voor het uitvoeren van de opdracht
+$run_c = mysqli_query($db_connection, $insert_c);  // variabele en query voor het uitvoeren van de opdracht
 
 if($run_c) {          // als het door gebruiker is ingevoerd dan de onderstaande text.
 
+    header("Location:../html/shop.php");
     echo "<script>alert('registration succesfull!')</script>";
 }
 

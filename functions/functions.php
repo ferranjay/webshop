@@ -35,3 +35,37 @@ function getBrands(){
         echo "<li><a href='#'>$brand_title</a></li>";
     }
 }
+
+
+function getPro(){
+
+    global $db_connection;
+
+    $get_pro = "SELECT product_id, product_cat, product_brand, product_title, product_image, product_price FROM products ORDER BY RAND () LIMIT 0,3"; //
+
+    $run_pro = mysqli_query ($db_connection, $get_pro);
+
+    foreach ($run_pro as $row){
+
+        $pro_id = $row ['product_id'];
+        $pro_cat = $row ['product_cat'];
+        $pro_brand = $row ['product_brand'];
+        $pro_title = $row ['product_title'];
+        $pro_image = $row ['product_image'];
+        $pro_price = $row ['product_price'];
+
+    echo "
+        <div id='single_product'>
+        <h3>$pro_title</h3>
+        <img src='../admin_area/product_images/$pro_image' width='180px' height='180px' />
+        <p> $pro_price </p>
+        <a href='details.php?pro_id=$pro_id' style='float:left;'>Details</a>
+        <a href='shop.php?pro_id=$pro_id'><button style='float:right;'>Add to cart</a>
+        </div>
+    ";
+
+    }
+    //webshop/admin_area/product_images/nike-air-monarch.jpg
+}
+
+

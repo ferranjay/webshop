@@ -10,6 +10,7 @@
     <title>Statements</title>
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Lora:700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
 
 
 </head>
@@ -21,23 +22,22 @@
 
             <ul class="menu">
                 <li>
-                    <a href="index.php">Home</a>
+                    <a href="index.php">HOME</a>
                 </li>
                 <li>
-                    <a href="html/shop.php">Shop</a>
+                    <a href="html/shop.php">SHOP</a>
                 </li>
                 <li>
-                    <a href="customer/customer_registration.php">Register</a>
+                    <a href="customer/customer_registration.php">REGISTER</a>
                 </li>
                 <li>
-                    <a href="customer/login.php">Login</a>
+                    <a href="customer/login.php">LOGIN</a>
                 </li>
                 <li>
-                    <a href="html/contact.php">Contact</a>
+                    <a href="html/cart.php">CART</a>
                 </li>
-            </ul>
-
-            <form class="formone" method="get" action="results.php" enctype="multipart/form-data">
+                </ul>
+                <form class="formone" method="get" action="results.php" enctype="multipart/form-data">
                 <input type="text" name="user_query" placeholder="search a product"/> 
                 </form>
         </nav>
@@ -46,34 +46,58 @@
     <!-- landing page -->
 
     <div class="containertwo">
+    <video playsinline autoplay muted loop poster="../img.33.jpg" id="bgvideo" width="x" height="y">
+        <source src="RIMOWA.mp4" type="video/mp4">
+        </video>
         <div class="title">
         <h1>Statements</h1>
         </div>
     </div>
 
     <div class="containerthree">
-        <div class="three-wrapper">
-        <div class="main1">
-            <h3 class="type1">...</h2>
-        </div>
-        <div class="main2">
-            <h3 class="type2">...</h2>
-        </div>
-        <div class="main3">
-            <h3 class="type3">...</h2>
-        </div>
-        <div class="main4">
-            <h3 class="type4">...</h2>
-        </div>
+    <h2>"Making a statement with style"</h2>
+        <div class="three-one">
+            We are a lifestyle brand focussing on unique fashionable products. Our inspiration is based on a variety of styles, combining cultures and stylish clothes. 
+                Our core value is to tell a story with stylish products. Statements hopes to bridge the gap between street culture and high fashion.  We manufacture goods that are classic, premium quality, unique and timeless.
+                <br><br> 
         </div>
     </div>
 
+    <div class="containerfour">
+        <div class="four-two">
+            <ul>Wholesale <br><br>
+            If you are interested in becoming an official <br> stockist, please email us at wholesale@statements.com <br>with the following information regarding your store: <br><br>
+            Name of store & location<br>Owner name<br>Pictures of your store's interior & exterior.<br>List of brands carried.<br>Stores contact information, including buyer or manager.
+            <br>
+            </ul>
+
+
+
+        </div>
+        <div class="four-three"><p>Statement of the month</p>
+            <img src="img/77.jpg" >
+        </div>
+        <div class="four-four">
+            <ul>Newsletter <br><br>
+            Subscribe to get special offers, free giveaways, <br>restock updates and sale promotions.<ul>
+        </div>
+    
+    </div>
+
+
+
+
+
+
+
+
+
     <div class="link-container">
-    <h3>Categories</h3>
+    <h3>CATEGORIES</h3>
 
     <?php getCats(); ?>
 
-    <h3>Brands</h3>
+    <h3>BRANDS</h3>
     
     <?php getBrands(); ?>
 
@@ -87,11 +111,28 @@
     <!-- footer -->
     <footer>
         <div class="footertext">
-         &copy; 2019 by www.xventure.com
-        </span>
+            <ul class="menufooter">
+                <li>
+                    <a>&copy; STATEMENTS 2019</a>
+                </li>
+                <li>
+                    <a href="html/shop.php">CONTACT US</a>
+                </li>
+                <li>
+                    <a href="customer/customer_registration.php">SHIPPING</a>
+                </li>
+                <li>
+                    <a href="customer/login.php">TRACKING</a>
+                </li>
+                <li>
+                    <a href="html/cart.php">RETURNS</a>
+                </li>
+            </ul>
+        </div>
     </footer>
 
     <script src="js/main.js"></script>
+    <script src="http://code.jquery.com/jquery-git2.js"></script>
 </body>
 
 </html>

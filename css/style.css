@@ -1,9 +1,10 @@
 body {
-    font-family: "raleway";
+    margin: 0;
+    font-family: 'Muli', sans-serif;
     min-height: 2000px; 
     position: relative;
 }
-/* navbar */
+/* --------------------------------------------------------------NAVBAR */
 
 .containerone {
     display: flex;
@@ -28,7 +29,8 @@ body {
 
 .menu li a {
   padding: 40px;
-  font-family: "raleway";
+  font-size: 12px;
+  font-family: 'Muli', sans-serif;
   text-decoration: none;
   color: black;
 }
@@ -43,9 +45,11 @@ body {
   float: right;
   color: white;
   line-height: 70px;
+  outline: none;
 }
 
-/* landing page */
+
+/* ----------------------------------------------------------LANDING PAGE */
 
 .containertwo {
   justify-content: center;
@@ -54,9 +58,8 @@ body {
   color: white;
   text-shadow: 5px 5px 5px black;
   display: flex;
-  height: 60vh;
+  height: 50vh;
   width:100%;
-  background-image: url("../img/6.jpg");
   background-position-y: 30%;
   background-repeat:no-repeat;
   background-size: cover;
@@ -66,29 +69,124 @@ body {
   padding-top: 150px;
 }
 
-.containerthree {
-  display: flex;
-  justify-content: center;
-  display: flex;
-  height: 1000px;
-  width:100%;
-  background: white;
-}
+video#bgvideo {
+  position: fixed;
+  top: 40%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -100;
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+  background: url(img/6.jpg) no-repeat;
+  }
+
+  .containerthree {
+    color: black;
+    height: 500px;
+    background: white;
+    list-style: none;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  
+  .containerthree h2 {
+    display: block;
+    max-width: 400px;
+    padding: 50px;
+    font-size: 20px;
+    color: black;
+    font-family: 'Muli', sans-serif;
+  }
+
+  .three-one {
+    display: block;
+    justify-content: center;
+    max-width: 600px;
+  }
 
 
-/* footer */
+  .containerfour {
+    color: black;
+    font-size: 13px;
+    height: 500px;
+    padding: 50px;
+    background: white;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
 
-footer {
-  height: 500px;
-  background-color:  #f8f8f8;
-}
+  .four-one {
+    display: flex;
+    justify-content: center;
+    padding: 50px;
+    color: black;
+    width: 550px;
+    margin: auto;
+  }
 
-.footertext {
-  padding-top: 400px;
-  text-align: center;
-}
 
-/* floating sidebar */
+  .four-two {
+    margin:40px;
+    display: flex;
+    flex-direction:row;
+    flex-wrap: wrap;
+    float: left;
+    background: white;
+    height: 500px;
+    width: 400px;
+  }
+
+  .four-two ul {
+    text-align: left;
+  }
+
+
+  .four-three {
+    margin:40px;
+    display: flex;
+    flex-direction:row;
+    width: 400px;
+    height: 500px;
+    background-image: url("img/77.jpg");
+    flex-wrap: wrap;
+    float: left;
+  }
+
+  .four-three img {
+    height: 400px;
+    width: 300px;
+  }
+
+  .four-four {
+    margin:40px;
+    display: flex;
+    flex-direction:row;
+    flex-wrap: wrap;
+    float: left;
+    background: white;
+    height: 500px;
+    width: 400px;
+    text-align: left;
+  }
+
+
+
+
+/* --------------------------------------------------------FLOATING SIDEBAR */
 
 .link-container {
   position: fixed;
@@ -98,6 +196,7 @@ footer {
   padding: 20px;
   background: #fff;
   box-shadow: 0 0 5px #333;
+  list-style-type: none;
 }
 
 .link-container a {
@@ -106,6 +205,9 @@ footer {
   text-decoration: none;
   color: #000;
   font-weight: bold;
+  font-size: 12px;
+  font-family: 'Muli', sans-serif;
+  text-transform: uppercase;
 }
 
 .link-container a:hover {
@@ -119,7 +221,7 @@ footer {
   top: 50px; /* how far from the top of the page the item should be pinned */
 }
 
-/* SHOP PAGE */
+/* --------------------------------------------------------------SHOP PAGE */
 
 .containershop {
   justify-content: center;
@@ -141,11 +243,35 @@ footer {
 }
 
 
+.containershopmain {
+  font-size: 13px;
+  display: flex;
+  justify-content: center;
+  align-content: space-between;
+  color: black;  
+  height: 2000px;
+  width:100%;
+  margin-top: 100px;
+  list-style: none;
+}
+
+
+#products_box {
+  display: flex;
+  width: 780px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+#singleproduct {
+  margin-left: 20px;
+  padding: 10px;
+  float: left;
+}
 
 
 
-
-/* CUSTOMER LOGIN PAGE */
+/* ------------------------------------------------------CUSTOMER LOGIN PAGE */
 
 .containerlogin {
     justify-content: center;
@@ -170,7 +296,7 @@ footer {
 
 
 
-/* ADMIN PAGE INSERT PRODUCT */
+/* ----------------------------------------------------------ADMIN PAGE INSERT PRODUCT */
 
 
 .form-wrapper {
@@ -193,20 +319,20 @@ footer {
 }
 
 
-/* REGISTER PAGE */
+/* ---------------------------------------------------------------REGISTER PAGE */
 
 .containerregister {
   display: flex;
   justify-content: center;
   font-family: "Black Heart";
   font-size: 60px;
-  color: red;
+  color: orange;
   text-shadow: 5px 5px 5px black;
   height: 60vh;
   width:100%;
-  background-image: url("../img/44.jpg");
+  background-image: url("../img/7.jpg");
   background-size: 100%;
-  background-position-y: 30%;
+  background-position-y: 20%;
   background-position-x: 80%;
 
 }
@@ -226,7 +352,7 @@ footer {
 }
 
 
-/* CONTACT PAGE */
+/* --------------------------------------------------------------------CONTACT PAGE */
 
 
 .containercontact {
@@ -250,7 +376,60 @@ footer {
 }
 
 
+/* --------------------------------------------------------------------CART PAGE */
 
+.containercart {
+    font-size: 13px;
+    display: flex;
+    justify-content: center;
+    align-content: space-between;
+    color: black;  
+    height: 2000px;
+    width:100%;
+    margin-top: 100px;
+    list-style: none;
+  }
+
+
+
+/* ----------------------------------------------------------------------------FOOTER */
+
+footer {
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  background-color:  #f8f8f8;
+  height: 500px;
+  width: 100%;
+  flex-direction: row;
+}
+
+.footertext {
+  padding-top: 400px;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  height: 80px;
+  top: 0; 
+  width: 100%;
+}
+
+.footertext {
+  font-size: 10px;
+  display: flex;
+}
+
+.menufooter li {
+  list-style-type: none;
+  float: Left;
+}
+
+.menufooter li a {
+  padding: 20px;
+  font-family: 'Muli', sans-serif;
+  text-decoration: none;
+  color: black;
+}
 
 
 

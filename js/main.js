@@ -10,3 +10,5 @@ var linkContainer = $('.link-container'),
       linkContainer.removeClass(stickyClass)
     }
   })
+
+  
