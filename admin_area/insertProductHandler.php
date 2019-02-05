@@ -14,8 +14,8 @@
             $product_desc = $_POST ['product_desc'];
             $product_keywords = $_POST ['product_keywords'];
 
-            echo $product_cat . '<br />';
-            echo $product_brand;
+           // echo $product_cat . '<br />';
+           // echo $product_brand;
        
 
         // ophalen van de bijbehorende afbeelding
@@ -34,8 +34,8 @@
 
         if ($insert_product){
 
-            //echo "<script> alert('Product has been added')</script>";           //  alert message van succes bij het bijvoegen van een new product
-            //echo "<script>window.open('insert_product.php','_self')</script>";  // javascript syntax (window.open) , met deze zin "refresh" ik de pagina
+            echo "<script> alert('Product has been added')</script>";           //  alert message van succes bij het bijvoegen van een new product
+            echo "<script>window.open('insert_product.php','_self')</script>";  // javascript syntax (window.open) , met deze zin "refresh" ik de pagina
         }
     }
 

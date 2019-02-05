@@ -112,20 +112,23 @@
     <footer>
     <div class="footertext">
             <ul class="menufooter">
-                <li>
+            <li>
                     <a>&copy; STATEMENTS 2019</a>
                 </li>
                 <li>
-                    <a href="html/shop.php">CONTACT US</a>
+                    <a href="html/shop.php">TERMS & CONDITIONS</a>
                 </li>
                 <li>
                     <a href="customer/customer_registration.php">SHIPPING</a>
                 </li>
                 <li>
-                    <a href="customer/login.php">TRACKING</a>
+                    <a href="html/cart.php">RETURNS</a>
                 </li>
                 <li>
-                    <a href="html/cart.php">RETURNS</a>
+                    <a href="customer/customer_registration.php">PRIVACY POLICY</a>
+                </li>
+                <li>
+                    <a href="html/shop.php">CONTACT US</a>
                 </li>
             </ul>
         </div>

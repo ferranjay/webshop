@@ -52,16 +52,18 @@
     </div>
 
     <div class="containershopmain">
-    <div id="content_area"> 
-
-    <div id="products_box"> 
+    <div class="products_box"> 
 
     <?php getPro(); ?>
+    <?php getCatPro(); ?>
+    <?php getBrandPro(); ?>
+    </div>
 
-    <div id="shopping_cart"></div>
+    <div class="shopping_cart"> <?php cart(); ?>
+        <span>Welcome Rebel! &nbsp;&nbsp;<a href="cart.php">Go to Cart</a> <br><br><b> Shopping Cart<br>Total Items. &nbsp; &nbsp;:<br>Total Price &nbsp; &nbsp; &nbsp;:</b></span>
     </div>
     </div>
-    </div>
+    
 
     <div class="link-container">
     <h3>CATEGORIES</h3>
@@ -80,20 +82,23 @@
     <footer>
     <div class="footertext">
             <ul class="menufooter">
-                <li>
+            <li>
                     <a>&copy; STATEMENTS 2019</a>
                 </li>
                 <li>
-                    <a href="html/shop.php">CONTACT US</a>
+                    <a href="html/shop.php">TERMS & CONDITIONS</a>
                 </li>
                 <li>
                     <a href="customer/customer_registration.php">SHIPPING</a>
                 </li>
                 <li>
-                    <a href="customer/login.php">TRACKING</a>
+                    <a href="html/cart.php">RETURNS</a>
                 </li>
                 <li>
-                    <a href="html/cart.php">RETURNS</a>
+                    <a href="customer/customer_registration.php">PRIVACY POLICY</a>
+                </li>
+                <li>
+                    <a href="html/shop.php">CONTACT US</a>
                 </li>
             </ul>
         </div>

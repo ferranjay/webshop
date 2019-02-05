@@ -55,7 +55,7 @@
     </div>
 
     <div class="containerthree">
-    <h2>"Making a statement with style"</h2>
+    <h2>"Making a statement with style "</h2>
         <div class="three-one">
             We are a lifestyle brand focussing on unique fashionable products. Our inspiration is based on a variety of styles, combining cultures and stylish clothes. 
                 Our core value is to tell a story with stylish products. Statements hopes to bridge the gap between street culture and high fashion.  We manufacture goods that are classic, premium quality, unique and timeless.
@@ -80,6 +80,7 @@
         <div class="four-four">
             <ul>Newsletter <br><br>
             Subscribe to get special offers, free giveaways, <br>restock updates and sale promotions.<ul>
+            <br><br><br><br><br> <p>SIGN ME UP!</p>
         </div>
     
     </div>
@@ -111,28 +112,31 @@
     <!-- footer -->
     <footer>
         <div class="footertext">
-            <ul class="menufooter">
+
+        <ul class="menufooter">
                 <li>
                     <a>&copy; STATEMENTS 2019</a>
                 </li>
                 <li>
-                    <a href="html/shop.php">CONTACT US</a>
+                    <a href="html/shop.php">TERMS & CONDITIONS</a>
                 </li>
                 <li>
                     <a href="customer/customer_registration.php">SHIPPING</a>
                 </li>
                 <li>
-                    <a href="customer/login.php">TRACKING</a>
+                    <a href="html/cart.php">RETURNS</a>
                 </li>
                 <li>
-                    <a href="html/cart.php">RETURNS</a>
+                    <a href="customer/customer_registration.php">PRIVACY POLICY</a>
+                </li>
+                <li>
+                    <a href="html/shop.php">CONTACT US</a>
                 </li>
             </ul>
         </div>
     </footer>
 
     <script src="js/main.js"></script>
-    <script src="http://code.jquery.com/jquery-git2.js"></script>
 </body>
 
 </html>

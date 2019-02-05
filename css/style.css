@@ -58,7 +58,7 @@ body {
   color: white;
   text-shadow: 5px 5px 5px black;
   display: flex;
-  height: 50vh;
+  height: 60vh;
   width:100%;
   background-position-y: 30%;
   background-repeat:no-repeat;
@@ -67,6 +67,7 @@ body {
 
 .containertwo h1 {
   padding-top: 150px;
+  letter-spacing: 0px;
 }
 
 video#bgvideo {
@@ -104,9 +105,10 @@ video#bgvideo {
     display: block;
     max-width: 400px;
     padding: 50px;
-    font-size: 20px;
+    font-size: 60px;
     color: black;
-    font-family: 'Muli', sans-serif;
+    font-family: 'Black Spirit';
+    -webkit-transform: rotate(-2deg);
   }
 
   .three-one {
@@ -121,6 +123,7 @@ video#bgvideo {
     font-size: 13px;
     height: 500px;
     padding: 50px;
+    padding-left: 200px;
     background: white;
     list-style: none;
     display: flex;
@@ -181,9 +184,15 @@ video#bgvideo {
     height: 500px;
     width: 400px;
     text-align: left;
+    margin-left: -50px !important;
   }
 
-
+  .four-four p {
+    font-size: 50px;
+    color: black;
+    font-family: 'Black Spirit';
+    -webkit-transform: rotate(-2deg);
+  }
 
 
 /* --------------------------------------------------------FLOATING SIDEBAR */
@@ -192,6 +201,7 @@ video#bgvideo {
   position: fixed;
   top: 400px;
   height: 380px;
+  max-width: 160px;
   left: 20px;
   padding: 20px;
   background: #fff;
@@ -227,12 +237,12 @@ video#bgvideo {
   justify-content: center;
   font-family: "Black Heart";
   font-size: 60px;
-  color: yellow;
+  color: red;
   text-shadow: 5px 5px 5px black;
   display: flex;
   height: 60vh;
   width:100%;
-  background-image: url("../img/33.jpg");
+  background-image: url("../img/6.jpg");
   background-repeat:no-repeat;
   background-size:cover;
   background-position-y: 30%;
@@ -249,25 +259,54 @@ video#bgvideo {
   justify-content: center;
   align-content: space-between;
   color: black;  
-  height: 2000px;
+  height: 1000px;
   width:100%;
   margin-top: 100px;
   list-style: none;
 }
 
 
-#products_box {
+.products_box {
   display: flex;
-  width: 780px;
+  align-items: flex-start;
+  align-content: flex-start;
+  flex-wrap: wrap;
+  width: calc( 100% - 200px );
   text-align: center;
+  margin-top: 40px;
+  margin-left: 200px;
   margin-bottom: 10px;
 }
 
-#singleproduct {
+.single_product {
+  display: inline-block;
   margin-left: 20px;
   padding: 10px;
   float: left;
+  -webkit-box-shadow: 0px 5px 1px 1px rgba(0,0,0,0.15);
+  -moz-box-shadow: 0px 1px 1px 1px rgba(0,0,0,0.15);
+  box-shadow: 10px 10px 28px -8px rgba(0,0,0,0.15);
+  margin-bottom: 20px;
+  transition: all .2s ease-in-out;
 }
+
+.single_product:hover { transform: scale(1.1); 
+}
+
+.single_product a{
+  text-decoration: none;
+  color: black;
+}
+
+.shopping_cart {
+  width: 300px;
+  height: 80px;
+  padding: 10px;
+  background-color: yellowgreen;
+}
+
+/* ------------------------------------------------------DETAIL PAGE */
+
 
 
 
@@ -431,6 +470,17 @@ footer {
   color: black;
 }
 
+.menufooter2 li {
+  list-style-type: none;
+  float: Left;
+}
+
+.menufooter2 li a {
+  padding: 20px;
+  font-family: 'Muli', sans-serif;
+  text-decoration: none;
+  color: black;
+}
 
 
 
