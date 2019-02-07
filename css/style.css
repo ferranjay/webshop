@@ -46,6 +46,7 @@ body {
   color: white;
   line-height: 70px;
   outline: none;
+  margin-left: 80px;
 }
 
 
@@ -194,6 +195,22 @@ video#bgvideo {
     -webkit-transform: rotate(-2deg);
   }
 
+  .submitButton3{
+    border: none;
+    background-color: inherit;
+    padding: 14px 28px;
+    font-size: 40px;
+    cursor: pointer;
+    display: inline-block;
+    font-family: 'Black Spirit';
+    opacity:0.5;
+  }
+  
+  /* On mouse-over */
+  .submitButton3:hover {
+    opacity:1;
+  }
+
 
 /* --------------------------------------------------------FLOATING SIDEBAR */
 
@@ -259,7 +276,7 @@ video#bgvideo {
   justify-content: center;
   align-content: space-between;
   color: black;  
-  height: 1000px;
+  height: 1300px;
   width:100%;
   margin-top: 100px;
   list-style: none;
@@ -299,10 +316,12 @@ video#bgvideo {
 }
 
 .shopping_cart {
-  width: 300px;
-  height: 80px;
-  padding: 10px;
-  background-color: yellowgreen;
+  font-size: 12px;
+  width: 200px;
+  height: 20px;
+  background-color: white;
+  padding-top: 20px;
+  margin-left: 200px;
 }
 
 /* ------------------------------------------------------DETAIL PAGE */
@@ -331,7 +350,25 @@ video#bgvideo {
   padding-top: 150px;
 }
 
+.loginForm {
+  margin-top: 120px;
+}
 
+.submitButton {
+  border: none;
+  background-color: inherit;
+  padding: 14px 28px;
+  font-size: 40px;
+  cursor: pointer;
+  display: inline-block;
+  font-family: 'Black Spirit';
+  opacity:0.5;
+}
+
+/* On mouse-over */
+.submitButton:hover {
+  opacity:1;
+}
 
 
 
@@ -388,8 +425,25 @@ video#bgvideo {
   width:100%;
   background: white;
   padding-top: 100px;
+  margin-top: 60px;
 }
 
+.submitButton2 {
+    border: none;
+    background-color: inherit;
+    padding: 14px 28px;
+    font-size: 40px;
+    cursor: pointer;
+    display: inline-block;
+    font-family: 'Black Spirit';
+    opacity:0.5;
+  }
+  
+  /* On mouse-over */
+  .submitButton2:hover {
+    opacity:1;
+  }
+  
 
 /* --------------------------------------------------------------------CONTACT PAGE */
 
@@ -428,7 +482,6 @@ video#bgvideo {
     margin-top: 100px;
     list-style: none;
   }
-
 
 
 /* ----------------------------------------------------------------------------FOOTER */

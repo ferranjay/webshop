@@ -1,20 +1,32 @@
 <!DOCTYPE html>
+<?php 
+session_start();
+include ("../functions/functions.php") 
+
+?>
+
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Statements</title>
-    <link href="../css/style.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Lora:700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
 
 
 </head>
 
 <body>
-    <!-- navigation bar-->
+    <!-- NAVIGATIE BAR -->
     <header>
         <nav class="containerone">
+
+            <form class="formone" method="get" action="results.php" enctype="multipart/form-data">
+                <input type="text" name="user_query" placeholder="search a product" />
+            </form>
 
             <ul class="menu">
                 <li>
@@ -29,40 +41,192 @@
                 <li>
                     <a href="../customer/login.php">LOGIN</a>
                 </li>
-                <li>
-                    <a href="../html/cart.php">CART</a>
-                </li>
-                </ul>
-                <form class="formone" method="get" action="results.php" enctype="multipart/form-data">
-                <input type="text" name="user_query" placeholder="search a product"/> 
-                </form>
+            </ul>
+
+            <div class="shopping_cart">
+                <?php cart(); ?><span>TOTAL ITEMS.&nbsp; &nbsp;
+                <?php total_items(); ?><br>TOTAL PRICE.&nbsp;&nbsp;
+                <?php total_price();?></b><br><a href="cart.php">GO TO CART</a></span>
+            </div>
+
         </nav>
     </header>
 
-    <!-- landing page -->
+    <!-- HERO BANNER  -->
 
-    <div class="containercontact">
+    <div class="containershop">
         <div class="title">
-        <h1>Statements</h1>
+            <h1>Statements</h1>
         </div>
     </div>
 
-    <div class="containercart">
+    <!-- MAIN PAGINA -->
     
+    <div class="containershopmain">
+        <div class="products_box_cart">
+
+            <form action="" method="post" enctype="multipart/form-data">
+                <table>
+                    <tr>
+                        <th>Remove</th>
+                        <th>Product(S)</th>
+                        <th>Quantity</th>
+                        <th>Total Price</th>
+                    </tr>
+
+                    <?php 
+		$total = 0;
+		
+		global $db_connection ; 
+		
+		$ip = getIp(); 
+		
+		$sel_price = "SELECT * FROM cart WHERE ip_add='$ip'";
+		
+		$run_price = mysqli_query($db_connection , $sel_price); 
+		
+		while($p_price=mysqli_fetch_array($run_price)){
+			
+			$pro_id = $p_price['p_id']; 
+			
+			$pro_price = "SELECT * FROM products WHERE product_id='$pro_id'";
+			
+			$run_pro_price = mysqli_query($db_connection ,$pro_price); 
+			
+			while ($pp_price = mysqli_fetch_array($run_pro_price)){
+			
+			$product_price = array($pp_price['product_price']);
+			
+			$product_title = $pp_price['product_title'];
+			
+			$product_image = $pp_price['product_image']; 
+			
+			$single_price = $pp_price['product_price'];
+			
+			$values = array_sum($product_price); 
+			
+			$total += $values; 
+					
+					?>
+
+                    <tr align="center">
+                        <td><input type="checkbox" name="remove[]" value="<?php echo $pro_id;?>" /></td>
+                        <!-- $pro_id word opeghaald van hierboven , laat de checkbox zien -->
+                        <td>
+                            <?php echo $product_title; ?><br>
+                            <img src="../admin_area/product_images/<?php echo $product_image;?>" width="200" height="200" />
+                            <!-- laat de image zien -->
+                        </td>
+                        <td><input type="text" size="4" name="qty" value="<?php echo $_SESSION['qty'];?>" /></td>
+                        <!-- laat de hoeveelheid zien -->
+
+
+                        <?php 
+
+                       if(empty($_SESSION['qty'])){        // als er niks ingevuld word in qty field dan is 0 
+                       $_SESSION['qty'] = 0;
+                       }
+
+						if(isset($_POST['update_cart'])){  
+						
+							$qty = $_POST['qty'];           // creeren een lokale variabele zodat we dit kunnen linken met de input field hierboven, slaan we op in deze lokale variabele 
+							
+							$update_qty = "update cart set qty='$qty'";  // update met de info die van de variabele $qty komt
+							
+							$run_qty = mysqli_query($db_connection, $update_qty); 
+							
+							$_SESSION['qty']=$qty;          // als we de waarde in de textfield willen behouden moeten we gebruik maken van $_SESSION (superglobal)
+                                                            // als je SESSION wilt gebruiken moet je zorgen dat je dit start bovenaan deze pagina
+                            $total = $total * $qty;         // session brengt een waarde van qty die kunnen we terug laten zien in de value input field hierboven in de tabel
+                                                            // we zorgen dat de variabele $total nu het totaal is van $total x $qty 
+
+						}
+						
+						
+						?>
+
+
+                        <td>
+                            <?php echo "€" . $single_price; ?>
+                        </td>
+                    </tr>
+
+
+                    <?php } } ?>
+
+                    <tr>
+                        <td colspan="4" align="right"><b>Sub Total:</b></td>
+                        <td>
+                            <?php echo "€" . $total;?>
+                        </td>
+                    </tr>
+
+                    <tr align="center">
+                        <td colspan="2"><input type="submit" name="update_cart" value="Update Cart" /></td>
+                        <td><input type="submit" name="continue" value="Continue Shopping" /><a href="shop.php"></a></td>
+                        <td><button><a href="checkout.php" style="text-decoration:none; color:black;">Checkout</a></button></td>
+                    </tr>
+
+                </table>
+
+            </form>
+
+            <?php 
+
+        function updatecart(){
+
+        global $db_connection;
+
+        $ip = getIp();  // function
+
+        if(isset($_POST['update_cart'])){   // als update cart button geclicked is wat moet er dan gedaan worden 
+
+            foreach($_POST['remove'] as $remove_id){// remove_id is een lokale variabele die je zelf benoemt, we maken een loop, 
+                                                    // de geselecteerd input field is 'remove'  en die moet de lokale variabele verwijderen.
+            $delete_product = "delete FROM cart WHERE p_id = '$remove_id' AND ip_add='$ip'"; // hier geef je welke info de variabele $delete_product heeft
+
+            $run_delete = mysqli_query($db_connection, $delete_product);
+
+            if($run_delete){
+                echo "<script>window.open('cart.php','_self')</script>";  //met de _self attribute refresh je de pagina
+            }
+        }
+    }
+
+    if(isset($_POST['continue'])){         // indien mensen weer verder willen winkelen en op continue drukken gaan ze terug naar shop.php
+        echo "<script>window.open('shop.php', '_self')</script>";  
+    }
+
+    echo @$up_cart = updatecart();
+        
+    }
+
+    ?>
+
+        </div>
+
+
     </div>
 
-    
 
+    <div class="link-container">
+        <h3>CATEGORIES</h3>
 
+        <?php getCats(); ?>
 
+        <h3>BRANDS</h3>
+
+        <?php getBrands(); ?>
+
+    </div>
 
 
 
     <!-- footer -->
     <footer>
-    <div class="footertext">
+        <div class="footertext">
             <ul class="menufooter">
-            <li>
+                <li>
                     <a>&copy; STATEMENTS 2019</a>
                 </li>
                 <li>

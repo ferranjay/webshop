@@ -2,7 +2,10 @@
 <?php
 //include ("../customer/db.php");
 //include ("../customer/registerFormHandler.php");
-
+?>
+<?php 
+include ("../functions/functions.php");
+include ("../customer/db.php");
 ?>
 
 <html lang="en">
@@ -23,6 +26,10 @@
     <header>
         <nav class="containerone">
 
+        <form class="formone" method="get" action="results.php" enctype="multipart/form-data">
+                <input type="text" name="user_query" placeholder="search a product"/> 
+                </form>
+
             <ul class="menu">
                 <li>
                     <a href="../index.php">HOME</a>
@@ -36,13 +43,10 @@
                 <li>
                     <a href="../customer/login.php">LOGIN</a>
                 </li>
-                <li>
-                    <a href="../html/cart.php">CART</a>
-                </li>
                 </ul>
-                <form class="formone" method="get" action="results.php" enctype="multipart/form-data">
-                <input type="text" name="user_query" placeholder="search a product"/> 
-                </form>
+                <div class="shopping_cart"> <?php cart(); ?>
+        <span>TOTAL ITEMS.&nbsp; &nbsp;<?php total_items(); ?><br>TOTAL PRICE.&nbsp;&nbsp;<?php total_price();?></b><br><a href="../html/cart.php">GO TO CART</a></span>
+    </div>
         </nav>
     </header>
 
@@ -60,23 +64,24 @@
 
             <table> 
                 <tr>
-                    <td>Create an account</td>
+                    <td>Customer Firstname:</td>
+                    <td><input type="text" name="customer_firstname" required/></td>
                 </tr>
                 <tr>
-                    <td>Customer Name:</td>
-                    <td><input type="text" name="c_name" required/></td>
+                    <td>Customer Lastname:</td>
+                    <td><input type="text" name="customer_lastname" required/></td>
                 </tr>
                 <tr>
                     <td>Customer Email:</td>
-                    <td><input type="text" name="c_email" required/></td>
+                    <td><input type="text" name="customer_email" required/></td>
                 </tr>
                 <tr>
                     <td>Customer Password:</td>
-                    <td><input type="text" name="c_pass" required/></td>
+                    <td><input type="text" name="customer_password" required/></td>
                 </tr>
                 <tr>
                     <td>Customer Country:</td>
-                        <td><select name="c_country">
+                        <td><select name="customer_country">
                         <option>Select a Country</option>
                         <option>Belgium</option>
                         <option>Germany</option>
@@ -88,18 +93,18 @@
                 </tr>
                 <tr>
                     <td>Customer City</td>
-                    <td><input type="text" name="c_city"/></td>
+                    <td><input type="text" name="customer_city" required/></td>
                 </tr>
                 <tr>
-                    <td>Customer Contact</td>
-                    <td><input type="text" name="c_contact"/></td>
+                    <td>Customer Telephone</td>
+                    <td><input type="text" name="customer_telephone" required/></td>
                 </tr>
                 <tr>
                     <td>Customer Address</td>
-                    <td><textarea cols="20" rows="10" name="c_address"></textarea></td>
+                    <td><textarea cols="20" rows="10" name="customer_address" required></textarea></td>
                 </tr>
                 <tr>
-                    <td><input type="submit" name="register" value="Register"></td>
+                    <td><input type="submit" class="submitButton2" name="register" value="Register"></td>
                 </tr>
             </table>
 
@@ -138,3 +143,33 @@
 </body>
 
 </html>
+
+<?php 
+    if(isset($_POST['register'])){
+
+        $ip = getIp();
+
+        $customer_firstname = $_POST['customer_firstname'];  // lokale veriabele $c_name gemaakt waar we de data inzetten die uit de form komt hierboven
+        $customer_lastname = $_POST['customer_firstname'];   // zo doen we dit ook voor de andere info velden die ingevuld worden
+        $customer_email = $_POST['customer_email'];
+        $customer_password = $_POST['customer_password'];
+        $customer_country = $_POST['customer_country'];
+        $customer_city = $_POST['customer_city'];
+        $customer_telephone = $_POST['customer_telephone'];
+        $customer_address = $_POST['customer_address'];
+
+        // we hebben lokale variabelen gemaakt en deze info moet nu naar de database verstuurd worden
+
+        echo $insert_customer = "INSERT INTO customers (customer_ip, customer_firstname, customer_lastname, customer_email, customer_password, 
+        customer_country, customer_city, customer_telephone, customer_address) VALUES ('$ip','$customer_firstname','$customer_lastname','$customer_email',
+        '$customer_password','$customer_country','$customer_city','$customer_telephone','$customer_address')";
+
+        $run_customer = mysqli_query($db_connection, $insert_customer);
+
+        if ($run_customer){
+            echo "<script>alert('registration succesfull!'</script>";     // javascript alert 
+        }
+
+    }
+
+?>

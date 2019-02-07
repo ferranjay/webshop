@@ -60,9 +60,7 @@
     <div class="containershopmain">
         <div class="products_box">
 
-            <?php getPro(); ?>
-            <?php getCatPro(); ?>
-            <?php getBrandPro(); ?>
+            
         </div>
 
 

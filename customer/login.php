@@ -1,7 +1,6 @@
 <!DOCTYPE html>
-<?php
-include ("db.php");
-?>
+<?php include ("db.php");?>
+<?php include ("../functions/functions.php") ?>
 
 <html lang="en">
 <head>
@@ -21,6 +20,10 @@ include ("db.php");
     <header>
         <nav class="containerone">
 
+        <form class="formone" method="get" action="results.php" enctype="multipart/form-data">
+                <input type="text" name="user_query" placeholder="search a product"/> 
+                </form>
+
             <ul class="menu">
                 <li>
                     <a href="../index.php">HOME</a>
@@ -34,14 +37,11 @@ include ("db.php");
                 <li>
                     <a href="../customer/login.php">LOGIN</a>
                 </li>
-                <li>
-                    <a href="../html/cart.php">CART</a>
-                </li>
                 </ul>
 
-                <form class="formone" method="get" action="results.php" enctype="multipart/form-data">
-                <input type="text" name="user_query" placeholder="search a product"/> 
-                </form>
+                <div class="shopping_cart"> <?php cart(); ?>
+        <span>TOTAL ITEMS.&nbsp; &nbsp;<?php total_items(); ?><br>TOTAL PRICE.&nbsp;&nbsp;<?php total_price();?></b><br><a href="../html/cart.php">GO TO CART</a></span>
+    </div>
         </nav>
     </header>
 
@@ -67,7 +67,7 @@ include ("db.php");
     ?>
 
     <form class="loginForm" action="loginFormHandler.php" method="POST">
-        <h1>Login</h1>
+        <h1></h1>
         <label for="username">Email:</label>
         <input type="email" id="username" name="customer_email" autofocus required/>
         
