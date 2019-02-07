@@ -26,9 +26,9 @@ include ("../customer/db.php");
     <header>
         <nav class="containerone">
 
-        <form class="formone" method="get" action="results.php" enctype="multipart/form-data">
-                <input type="text" name="user_query" placeholder="search a product"/> 
-                </form>
+         <!-- <form class="formone" method="get" action="results.php" enctype="multipart/form-data">
+                <input type="text" name="user_query" placeholder="search a product" />
+            </form> -->
 
             <ul class="menu">
                 <li>
@@ -60,7 +60,7 @@ include ("../customer/db.php");
 
     <div class="form-wrapper-register">
 
-        <form action="registerFormHandler.php" method="post" enctype="multipart/form-data">
+        <form class="form-wrapper-register2"  action="registerFormHandler.php" method="post" enctype="multipart/form-data">
 
             <table> 
                 <tr>

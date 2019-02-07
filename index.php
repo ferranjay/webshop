@@ -1,6 +1,8 @@
 <!DOCTYPE html>
-<?php include ("functions/functions.php") ?>
-<?php include ("admin_area/db.php") ?>
+<?php 
+session_start();
+include ("functions/functions.php");
+include ("admin_area/db.php"); ?>
 
 <html lang="en">
 
@@ -21,9 +23,9 @@
     <header>
         <nav class="containerone">
 
-            <form class="formone" method="get" action="results.php" enctype="multipart/form-data">
+            <!-- <form class="formone" method="get" action="results.php" enctype="multipart/form-data">
                 <input type="text" name="user_query" placeholder="search a product" />
-            </form>
+            </form> -->
 
             <ul class="menu">
                 <li>
@@ -36,7 +38,18 @@
                     <a href="customer/customer_registration.php">REGISTER</a>
                 </li>
                 <li>
-                    <a href="customer/login.php">LOGIN</a>
+                <?php   // !isset is gelijk aan if NOT set
+                if(!isset($_SESSION[''])){
+                    
+                    echo "<a href='customer/login.php'>LOGIN</a>";
+                }
+
+                else {  // als de persoon gewoon ingelogd is dan het volgende 
+                    
+                    echo "<a href='customer/logout.php'>Logout</a>";
+                }
+
+                ?>
                 </li>
             </ul>
 
@@ -45,6 +58,8 @@
                 <span>TOTAL ITEMS.&nbsp; &nbsp;
                     <?php total_items(); ?><br>TOTAL PRICE.&nbsp;&nbsp;
                     <?php total_price();?></b><br><a href="html/cart.php">GO TO CART</a></span>
+
+
             </div>
 
         </nav>
@@ -108,7 +123,7 @@
     </div>
 
 
-    <div class="link-container">
+    <!-- <div class="link-container">
         <h3>CATEGORIES</h3>
 
         <?php getCats(); ?>
@@ -117,11 +132,7 @@
 
         <?php getBrands(); ?>
 
-    </div>
-
-
-
-
+    </div> -->
 
 
     <!-- footer -->

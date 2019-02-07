@@ -119,7 +119,7 @@ function total_items() {
 //} 
 
 
-//  OPHALEN VAN TOTALE PRIJS MET WHILE LOOP
+//  OPHALEN VAN TOTALE PRIJS MET WHILE LOOP   DIT MOET VERVANGEN WORDEN MET foreach
 
 function total_price(){
 	
@@ -158,6 +158,38 @@ function total_price(){
     
 
 }
+
+// UPDATEN VAN WINKELWAGEN 
+
+function updatecart(){
+
+    global $db_connection;
+
+    $ip = getIp();  // function
+
+    if(isset($_POST['update_cart'])){   // als update cart button geclicked is wat moet er dan gedaan worden 
+
+        foreach($_POST['remove'] as $remove_id){// remove_id is een lokale variabele die je zelf benoemt, we maken een loop, 
+                                                // de geselecteerd input field is 'remove'  en die moet de lokale variabele verwijderen.
+        $delete_product = "DELETE FROM cart WHERE p_id='$remove_id' AND ip_add='$ip'"; // hier geef je welke info de variabele $delete_product heeft
+
+        $run_delete = mysqli_query($db_connection, $delete_product);
+
+        if($run_delete){
+            echo "<script>window.open('cart.php','_self')</script>";  //met de _self attribute refresh je de pagina dit doen we nadat update geclicked is
+        }
+    }
+}
+
+        if(isset($_POST['continue'])){         // indien mensen weer verder willen winkelen en op continue drukken gaan ze terug naar shop.php
+        echo "<script>window.open('shop.php', '_self')</script>";  
+        }
+
+        echo @$up_cart = updatecart();
+    
+}
+
+
 
 
 

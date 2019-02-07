@@ -107,25 +107,28 @@ include ("../functions/functions.php")
 			
 			$total += $values; 
 					
-					?>
+		    ?>
 
-                    <tr align="center">
-                        <td><input type="checkbox" name="remove[]" value="<?php echo $pro_id;?>" /></td>
-                        <!-- $pro_id word opeghaald van hierboven , laat de checkbox zien -->
-                        <td>
-                            <?php echo $product_title; ?><br>
-                            <img src="../admin_area/product_images/<?php echo $product_image;?>" width="200" height="200" />
-                            <!-- laat de image zien -->
-                        </td>
-                        <td><input type="text" size="4" name="qty" value="<?php echo $_SESSION['qty'];?>" /></td>
-                        <!-- laat de hoeveelheid zien -->
+            <tr align="center">
+                <td><input type="checkbox" name="remove[]" value="<?php echo $pro_id;?>" /></td>
+                    <!-- $pro_id word opeghaald van hierboven , laat de checkbox zien -->
+                <td>
+                
+                <?php echo $product_title; ?><br>
+                            
+                <img src="../admin_area/product_images/<?php echo $product_image;?>" width="200" height="200" />
+                    <!-- laat de image zien -->
+                </td>
+                        
+                <td><input type="text" size="4" name="qty" value="<?php echo $_SESSION['qty'];?>" /></td>
+                <!-- laat de hoeveelheid zien -->
 
 
-                        <?php 
+            <?php 
 
-                       if(empty($_SESSION['qty'])){        // als er niks ingevuld word in qty field dan is 0 
-                       $_SESSION['qty'] = 0;
-                       }
+                if(empty($_SESSION['qty'])){        // als er niks ingevuld word in qty field dan is 0 
+                        $_SESSION['qty'] = 0;
+                    }
 
 						if(isset($_POST['update_cart'])){  
 						
@@ -140,13 +143,11 @@ include ("../functions/functions.php")
                             $total = $total * $qty;         // session brengt een waarde van qty die kunnen we terug laten zien in de value input field hierboven in de tabel
                                                             // we zorgen dat de variabele $total nu het totaal is van $total x $qty 
 
-						}
-						
-						
-						?>
+						}		
+			?>
 
 
-                        <td>
+                    <td>
                             <?php echo "€" . $single_price; ?>
                         </td>
                     </tr>
@@ -170,40 +171,9 @@ include ("../functions/functions.php")
                 </table>
 
             </form>
+            <?php updatecart(); ?>
 
-            <?php 
-
-        function updatecart(){
-
-        global $db_connection;
-
-        $ip = getIp();  // function
-
-        if(isset($_POST['update_cart'])){   // als update cart button geclicked is wat moet er dan gedaan worden 
-
-            foreach($_POST['remove'] as $remove_id){// remove_id is een lokale variabele die je zelf benoemt, we maken een loop, 
-                                                    // de geselecteerd input field is 'remove'  en die moet de lokale variabele verwijderen.
-            $delete_product = "delete FROM cart WHERE p_id = '$remove_id' AND ip_add='$ip'"; // hier geef je welke info de variabele $delete_product heeft
-
-            $run_delete = mysqli_query($db_connection, $delete_product);
-
-            if($run_delete){
-                echo "<script>window.open('cart.php','_self')</script>";  //met de _self attribute refresh je de pagina
-            }
-        }
-    }
-
-    if(isset($_POST['continue'])){         // indien mensen weer verder willen winkelen en op continue drukken gaan ze terug naar shop.php
-        echo "<script>window.open('shop.php', '_self')</script>";  
-    }
-
-    echo @$up_cart = updatecart();
-        
-    }
-
-    ?>
-
-        </div>
+            </div>
 
 
     </div>

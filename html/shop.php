@@ -20,9 +20,9 @@
     <header>
         <nav class="containerone">
 
-            <form class="formone" method="get" action="results.php" enctype="multipart/form-data">
+             <!-- <form class="formone" method="get" action="results.php" enctype="multipart/form-data">
                 <input type="text" name="user_query" placeholder="search a product" />
-            </form>
+            </form> -->
 
             <ul class="menu">
                 <li>

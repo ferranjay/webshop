@@ -20,6 +20,7 @@ body {
 
 .menu{
     padding-top: 12px;
+    margin-left: 400px;
     display: flex;
     flex-direction: row;
     align-content: center;
@@ -89,6 +90,7 @@ video#bgvideo {
 
   .containerthree {
     color: black;
+    margin-left: -100px;
     height: 500px;
     background: white;
     list-style: none;
@@ -124,6 +126,7 @@ video#bgvideo {
     font-size: 13px;
     height: 500px;
     padding: 50px;
+    margin-left: -100px;
     padding-left: 200px;
     background: white;
     list-style: none;
@@ -203,12 +206,13 @@ video#bgvideo {
     cursor: pointer;
     display: inline-block;
     font-family: 'Black Spirit';
-    opacity:0.5;
+    opacity: 1 ;
   }
   
   /* On mouse-over */
   .submitButton3:hover {
-    opacity:1;
+    opacity: 0.5 ;
+    -webkit-transform: rotate(-2deg);
   }
 
 
@@ -254,7 +258,7 @@ video#bgvideo {
   justify-content: center;
   font-family: "Black Heart";
   font-size: 60px;
-  color: red;
+  color: yellowgreen;
   text-shadow: 5px 5px 5px black;
   display: flex;
   height: 60vh;
@@ -352,6 +356,12 @@ video#bgvideo {
 
 .loginForm {
   margin-top: 120px;
+  height: 200px;
+  -webkit-box-shadow: 0px 5px 1px 1px rgba(0,0,0,0.15);
+  -moz-box-shadow: 0px 1px 1px 1px rgba(0,0,0,0.15);
+  box-shadow: 10px 10px 28px -8px rgba(0,0,0,0.15);
+  margin-bottom: 20px;
+  transition: all .2s ease-in-out;
 }
 
 .submitButton {
@@ -362,15 +372,14 @@ video#bgvideo {
   cursor: pointer;
   display: inline-block;
   font-family: 'Black Spirit';
-  opacity:0.5;
+  opacity: 1 ;
 }
 
 /* On mouse-over */
 .submitButton:hover {
-  opacity:1;
+  opacity: 0.5 ;
+  -webkit-transform: rotate(-2deg);
 }
-
-
 
 /* ----------------------------------------------------------ADMIN PAGE INSERT PRODUCT */
 
@@ -425,23 +434,38 @@ video#bgvideo {
   width:100%;
   background: white;
   padding-top: 100px;
-  margin-top: 60px;
+  margin-top: 40px;
+}
+
+.form-wrapper-register2{
+  display: flex;
+  justify-content: center;
+  height: 600px;
+  width: 500px;
+  padding-top: 20px;
+  background: white;
+  -webkit-box-shadow: 0px 5px 1px 1px rgba(0,0,0,0.15);
+  -moz-box-shadow: 0px 1px 1px 1px rgba(0,0,0,0.15);
+  box-shadow: 10px 10px 28px -8px rgba(0,0,0,0.15);
+
 }
 
 .submitButton2 {
     border: none;
     background-color: inherit;
-    padding: 14px 28px;
     font-size: 40px;
     cursor: pointer;
     display: inline-block;
     font-family: 'Black Spirit';
-    opacity:0.5;
+    opacity: 1 ;
+    padding-top: 100px;
+    padding-left: 50px;
   }
   
   /* On mouse-over */
   .submitButton2:hover {
-    opacity:1;
+    opacity: 0.5 ;
+    -webkit-transform: rotate(-2deg);
   }
   
 
