@@ -403,6 +403,10 @@ video#bgvideo {
   box-shadow: 0 0 5px #333;
 }
 
+.admintitle {
+  color: goldenrod;
+}
+
 
 /* ---------------------------------------------------------------REGISTER PAGE */
 
@@ -467,31 +471,117 @@ video#bgvideo {
     opacity: 0.5 ;
     -webkit-transform: rotate(-2deg);
   }
+
+/* --------------------------------------------------------------------RETURNS PAGE */
+
+.returns {
+display: flex;
+justify-content: center;
+margin-left: 500px;
+width: 700px;
+margin-top: 120px;
+height: 1400px;
+font-family: 'Muli', sans-serif;
+-webkit-box-shadow: 0px 5px 1px 1px rgba(0,0,0,0.15);
+-moz-box-shadow: 0px 1px 1px 1px rgba(0,0,0,0.15);
+box-shadow: 10px 10px 28px -8px rgba(0,0,0,0.15);
+margin-bottom: 20px;
+transition: all .2s ease-in-out;
+}
+
+.button4 {
+  border: none;
+    background-color: inherit;
+    font-size: 40px;
+    cursor: pointer;
+    display: inline-block;
+    font-family: 'Black Spirit';
+    opacity: 1 ;
+    padding-top: 100px;
+    padding-left: 50px;
+  }
   
+  /* On mouse-over */
+  .button4:hover {
+    opacity: 0.5 ;
+    -webkit-transform: rotate(-2deg);
+  }
+
+/* --------------------------------------------------------------------SHIPPING PAGE*/
+
+.shipping {
+  display: flex;
+  justify-content: center;
+  margin-left: 500px;
+  width: 700px;
+  margin-top: 120px;
+  height: 1600px;
+  font-family: 'Muli', sans-serif;
+  -webkit-box-shadow: 0px 5px 1px 1px rgba(0,0,0,0.15);
+  -moz-box-shadow: 0px 1px 1px 1px rgba(0,0,0,0.15);
+  box-shadow: 10px 10px 28px -8px rgba(0,0,0,0.15);
+  margin-bottom: 20px;
+  transition: all .2s ease-in-out;
+  }
+  
+  .button4 {
+    border: none;
+      background-color: inherit;
+      font-size: 40px;
+      cursor: pointer;
+      display: inline-block;
+      font-family: 'Black Spirit';
+      opacity: 1 ;
+      padding-top: 100px;
+      padding-left: 50px;
+    }
+    
+    /* On mouse-over */
+    .button4:hover {
+      opacity: 0.5 ;
+      -webkit-transform: rotate(-2deg);
+    }
+
+
+
+
 
 /* --------------------------------------------------------------------CONTACT PAGE */
 
-
 .containercontact {
-  display: flex;
   justify-content: center;
   font-family: "Black Heart";
   font-size: 60px;
-  color: yellowgreen;
+  color: greenyellow;
   text-shadow: 5px 5px 5px black;
+  display: flex;
   height: 60vh;
   width:100%;
   background-image: url("../img/contact.jpg");
-  background-size: 100%;
   background-position-y: 30%;
-  background-position-x: 20%;
-
+  background-repeat:no-repeat;
+  background-size:cover;
 }
 
 .containercontact h1 {
-  padding-top: 150px;
+padding-top: 150px;
 }
 
+.contactmain {
+  height: 1200px;
+  width: 100%;
+}
+
+.contact {
+  height: 500px;
+  width: 500px;
+  margin-left: 600px;
+  padding-top: 100px;
+  font-family: 'Muli', sans-serif;
+-webkit-box-shadow: 0px 5px 1px 1px rgba(0,0,0,0.15);
+-moz-box-shadow: 0px 1px 1px 1px rgba(0,0,0,0.15);
+box-shadow: 10px 10px 28px -8px rgba(0,0,0,0.15);
+}
 
 /* --------------------------------------------------------------------CART PAGE */
 

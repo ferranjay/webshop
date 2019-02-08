@@ -10,7 +10,7 @@
 
     $db_result = $db_connection->query($result);
 
-    if ($db_result->rowCount() != 0){
+    if ($db_result->num_rows != 0){
         foreach($db_result as $row){
             $name = $row['customer_firstname'];
         }

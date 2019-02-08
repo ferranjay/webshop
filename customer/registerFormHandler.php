@@ -13,7 +13,7 @@ $customer_telephone = $_POST['customer_telephone'];
 $customer_address = $_POST['customer_address'];
 
 $insert_c = "INSERT INTO customers (customer_ip, customer_firstname, customer_lastname, customer_email, customer_pass, customer_country, customer_city, customer_telephone, customer_address) 
-            VALUE ('$ip','$c_firstname','$c_lastname','$c_email','$c_pass','$c_country','$c_city','$c_telephone','$c_address')";
+            VALUE ('$ip','$customer_firstname','$customer_lastname','$customer_email','$customer_pass','$customer_country','$customer_city','$customer_telephone','$customer_address')";
 
 //echo $insert_c;
 

@@ -55,6 +55,7 @@
 
     <div class="form-wrapper">
 
+    <!--    NOG IN TE VOEREN WAT ER GEBEURT ALS IEMAND CORRECT IS INGELOGD -->
     <?php
     //if(){}
     //isset()
@@ -90,19 +91,13 @@
                     <a>&copy; STATEMENTS 2019</a>
                 </li>
                 <li>
-                    <a href="html/shop.php">TERMS & CONDITIONS</a>
+                    <a href="../html/shipping.php">SHIPPING</a>
                 </li>
                 <li>
-                    <a href="customer/customer_registration.php">SHIPPING</a>
+                    <a href="../html/returns.php">RETURNS</a>
                 </li>
                 <li>
-                    <a href="html/cart.php">RETURNS</a>
-                </li>
-                <li>
-                    <a href="customer/customer_registration.php">PRIVACY POLICY</a>
-                </li>
-                <li>
-                    <a href="html/shop.php">CONTACT US</a>
+                    <a href="../html/contact.php">CONTACT US</a>
                 </li>
             </ul>
         </div>

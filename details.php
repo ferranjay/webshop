@@ -31,9 +31,6 @@
                 <li>
                     <a href="customer/login.php">LOGIN</a>
                 </li>
-                <li>
-                    <a href="html/cart.php">CART</a>
-                </li>
             </ul>
             <form class="formone" method="get" action="results.php" enctype="multipart/form-data">
                 <input type="text" name="user_query" placeholder="search a product"/> 
@@ -83,7 +80,7 @@
     <p> $pro_price </p>
     <p> $pro_desc </p>
     <a href='html/shop.php?pro_id=$pro_id' style='float:left;'><b>Go Back</b></a>
-    <a href='index.php?pro_id=$pro_id'><button style='float:right;'>Add to cart</a>
+    <a href='html/shop.php?pro_id=$pro_id'><button style='float:right;'>Add to cart</a>
     </div>
 ";
     }
@@ -118,19 +115,13 @@
                     <a>&copy; STATEMENTS 2019</a>
                 </li>
                 <li>
-                    <a href="html/shop.php">TERMS & CONDITIONS</a>
+                    <a href="html/shipping.php">SHIPPING</a>
                 </li>
                 <li>
-                    <a href="customer/customer_registration.php">SHIPPING</a>
+                    <a href="html/returns.php">RETURNS</a>
                 </li>
                 <li>
-                    <a href="html/cart.php">RETURNS</a>
-                </li>
-                <li>
-                    <a href="customer/customer_registration.php">PRIVACY POLICY</a>
-                </li>
-                <li>
-                    <a href="html/shop.php">CONTACT US</a>
+                    <a href="html/contact.php">CONTACT US</a>
                 </li>
             </ul>
         </div>

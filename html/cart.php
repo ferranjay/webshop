@@ -23,10 +23,10 @@ include ("../functions/functions.php")
     <!-- NAVIGATIE BAR -->
     <header>
         <nav class="containerone">
-
+            <!--
             <form class="formone" method="get" action="results.php" enctype="multipart/form-data">
                 <input type="text" name="user_query" placeholder="search a product" />
-            </form>
+            </form> -->
 
             <ul class="menu">
                 <li>
@@ -110,7 +110,7 @@ include ("../functions/functions.php")
 		    ?>
 
             <tr align="center">
-                <td><input type="checkbox" name="remove[]" value="<?php echo $pro_id;?>" /></td>
+                <td><input type="checkbox" name="remove[]" value="<?php echo $pro_id;?>"/></td>
                     <!-- $pro_id word opeghaald van hierboven , laat de checkbox zien -->
                 <td>
                 
@@ -189,8 +189,6 @@ include ("../functions/functions.php")
         <?php getBrands(); ?>
 
     </div>
-
-
 
     <!-- footer -->
     <footer>

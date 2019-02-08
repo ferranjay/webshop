@@ -8,7 +8,7 @@ include ("db.php");
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Statements</title>
+    <title>Statements Admin Area</title>
     <link rel="stylesheet" type="text/css" href="../css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Lora:700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
@@ -19,7 +19,7 @@ include ("db.php");
 <body>
     <!-- navigation bar-->
     <header>
-        <nav class="containerone">
+       <!--  <nav class="containerone">
 
             <ul class="menu">
                 <li>
@@ -36,11 +36,11 @@ include ("db.php");
                 </li>
                 <li>
                     <a href="../html/contact.php">CONTACT</a>
-                </li>
+                </li> -->
 
-            <form class="formone" method="get" action="results.php" enctype="multipart/form-data">
+            <!-- <form class="formone" method="get" action="results.php" enctype="multipart/form-data">
                 <input type="text" name="user_query" placeholder="search a product"/> 
-                </form>
+                </form>  -->
                 </ul>
         </nav>
     </header>
@@ -48,15 +48,15 @@ include ("db.php");
     <!-- landing page -->
 
     <div class="containertwo">
-        <div class="title">
-        <h1>Statements</h1>
+        <div class="admintitle">
+        <h1>Statements<br>Admin Area</h1>
         </div>
     </div>
 
 
         <div class="form-wrapper">
 
-    <form class="insertproduct" action="insertProductHandler.php" method="post" enctype="multipart/form-data">
+        <form class="insertproduct" action="insertProductHandler.php" method="post" enctype="multipart/form-data">
 
         <table>
         <tr>

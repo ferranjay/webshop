@@ -90,19 +90,13 @@
                     <a>&copy; STATEMENTS 2019</a>
                 </li>
                 <li>
-                    <a href="html/shop.php">TERMS & CONDITIONS</a>
+                    <a href="shipping.php">SHIPPING</a>
                 </li>
                 <li>
-                    <a href="customer/customer_registration.php">SHIPPING</a>
+                    <a href="returns.php">RETURNS</a>
                 </li>
                 <li>
-                    <a href="html/cart.php">RETURNS</a>
-                </li>
-                <li>
-                    <a href="customer/customer_registration.php">PRIVACY POLICY</a>
-                </li>
-                <li>
-                    <a href="html/shop.php">CONTACT US</a>
+                    <a href="contact.php">CONTACT US</a>
                 </li>
             </ul>
         </div>
